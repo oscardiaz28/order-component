@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--pale-blue);
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 400px;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 20px;
+    height: auto;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card__contain{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 30px;
+    gap: 20px;
+}
+
+.card__texts h2{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.card__texts p{
+    margin-top: 10px;
+    color: var(--desaturated-blue);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.card__plan{
+    display: flex;
+    align-items: center;
+    background-color: var(--very-pale-blue);
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 15px 20px;
+}
+
+.plan-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.plan-container span i{
+    background-color: var(--pale-blue);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.card__plan .price{
+    text-align: left;
+}
+
+.card__plan .price p{
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.card__plan .price span{
+    font-size: 14px;
+    color: var(--desaturated-blue);
+    text-align: left;
+}
+
+.card__plan > a{
+    text-decoration: underline;
+    color: var(--bright-blue);
+}
+
+.card__contain .card__btns{
+    margin: 20px 0 0 0;
+}
+
+.card__contain .card__btns a:first-child{
+    background-color: var(--bright-blue);
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    color: white;
+    padding: 13px 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+.card__contain .card__btns a:last-child{
+    display: block;
+    margin-top: 25px;
+    font-size: 14px;
+    color: var(--desaturated-blue);
+    font-weight: 600;
+}
+
+
+@media screen and (max-width: 376px){
+    body{
+        background-image: url(images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+    }
+    .card .card__plan{
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px 10px;
+    }
+    .plan-container{
+        gap: 10px;
+    }
+    .card__plan > a{
+        font-size: 14px;
+        font-weight: bold;
+        color: var(--bright-blue);
+    }
+    .card__contain{
+        padding: 30px 20px;
+    }
+}
